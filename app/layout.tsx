@@ -262,6 +262,21 @@ function Footer() {
                   Béziers
                 </Link>
               </li>
+              <li>
+                <Link href="/travaux-sete" className="hover:text-gold transition-colors">
+                  Sète
+                </Link>
+              </li>
+              <li>
+                <Link href="/travaux-meze" className="hover:text-gold transition-colors">
+                  Mèze
+                </Link>
+              </li>
+              <li>
+                <Link href="/travaux-agde" className="hover:text-gold transition-colors">
+                  Agde
+                </Link>
+              </li>
               <li className="text-white-warm/40">& tout l&apos;Hérault (34)</li>
             </ul>
           </div>
