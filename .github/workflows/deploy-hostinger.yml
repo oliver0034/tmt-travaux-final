@@ -1,0 +1,31 @@
+name: Build & Deploy vers Hostinger
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Installer les dépendances
+        run: npm install --legacy-peer-deps
+
+      - name: Build (sans basePath pour domaine racine)
+        run: npm run build
+
+      - name: Publier le dossier out/ sur la branche hostinger
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          publish_branch: hostinger
+          force_orphan: true
