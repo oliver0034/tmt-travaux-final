@@ -252,6 +252,16 @@ function Footer() {
               <li>Pézenas</li>
               <li>Lodève</li>
               <li>Gignac</li>
+              <li>
+                <Link href="/renovation-montpellier" className="hover:text-gold transition-colors">
+                  Montpellier
+                </Link>
+              </li>
+              <li>
+                <Link href="/travaux-beziers" className="hover:text-gold transition-colors">
+                  Béziers
+                </Link>
+              </li>
               <li className="text-white-warm/40">& tout l&apos;Hérault (34)</li>
             </ul>
           </div>
