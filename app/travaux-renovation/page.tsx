@@ -72,8 +72,8 @@ export default function TravauxRenovationPage() {
               </span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
-              Travaux &{" "}
-              <span className="text-gradient-gold">Rénovation</span>
+              Rénovation &amp; Extension de Maison{" "}
+              <span className="text-gradient-gold">dans l&apos;Hérault (34)</span>
             </h1>
             <p className="mt-6 text-lg text-white-warm/70 leading-relaxed max-w-2xl">
               TMT Travaux prend en charge vos projets de rénovation et d&apos;aménagement dans
@@ -190,14 +190,15 @@ export default function TravauxRenovationPage() {
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-charcoal mb-8">
-            Rénovation dans l&apos;Hérault : préserver et transformer
+            Rénovation dans l&apos;Hérault : préserver le patrimoine, moderniser l&apos;habitat
           </h2>
-          <div className="prose prose-lg max-w-none text-[var(--text-secondary)]">
+          <div className="prose prose-lg max-w-none text-[var(--text-secondary)] space-y-5">
             <p>
-              L&apos;Hérault possède un patrimoine bâti riche et diversifié : mas en pierre calcaire,
-              maisons de village médiévales, bâtisses vigneronnes du XIXe siècle. La rénovation de
-              ces édifices exige une connaissance approfondie des techniques constructives anciennes
-              combinée à la maîtrise des normes actuelles.
+              L&apos;Hérault possède un patrimoine bâti riche et diversifié : mas en pierre calcaire
+              des garrigues, maisons de village médiévales, bâtisses vigneronnes du XIXe siècle,
+              fermes en galets du Languedoc. La rénovation de ces édifices exige une connaissance
+              approfondie des techniques constructives anciennes combinée à la maîtrise des normes
+              actuelles (DTU, Eurocodes, réglementation thermique RE2020).
             </p>
             <p>
               TMT Travaux intervient à <strong>Paulhan</strong>, <strong>Clermont-l&apos;Hérault</strong>,{" "}
@@ -207,11 +208,44 @@ export default function TravauxRenovationPage() {
               complète, notre équipe assure une exécution rigoureuse de chaque phase du chantier.
             </p>
             <p>
-              La pose d&apos;IPN pour l&apos;ouverture de murs porteurs constitue une intervention
-              structurelle critique. Elle nécessite impérativement une note de calcul établie par un
-              bureau d&apos;études structure, un étaiement provisoire conforme et une mise en œuvre par
-              des professionnels qualifiés. TMT Travaux garantit le respect de cette chaîne de
-              compétences sur chaque chantier.
+              L&apos;<strong>extension de maison</strong> est l&apos;une de nos prestations phares dans
+              l&apos;Hérault. Agrandir votre surface habitable — par extension latérale, surélévation
+              ou aménagement de combles — nécessite une étude structurelle préalable rigoureuse.
+              TMT Travaux vérifie systématiquement la capacité portante des fondations existantes,
+              la résistance des murs porteurs et la compatibilité des matériaux avant toute
+              intervention. Un diagnostic structurel précis est le gage d&apos;une extension
+              pérenne et conforme aux normes parasismiques de la zone 2-3 de l&apos;Hérault.
+            </p>
+            <p>
+              La <strong>pose d&apos;IPN</strong> pour l&apos;ouverture de murs porteurs constitue une
+              intervention structurelle critique ne pouvant être confiée qu&apos;à des professionnels
+              qualifiés. Elle nécessite impérativement : une note de calcul établie par un bureau
+              d&apos;études structure (dimensionnement de l&apos;IPN, HEA ou HEB selon la charge reprise),
+              un étaiement provisoire conforme des planchers concernés, et une mise en œuvre
+              soignée de l&apos;appui et du scellement. TMT Travaux garantit la chaîne complète
+              de responsabilités de la conception à la réception.
+            </p>
+            <p>
+              La <strong>rénovation de façades</strong> protège votre bâtiment des infiltrations et
+              améliore son isolation thermique. TMT Travaux réalise les ravalements par application
+              d&apos;enduit traditionnel à la chaux (DTU 26.1) ou d&apos;enduit monocouche hydraulique.
+              Le traitement préalable des fissures (structurelles ou de retrait), la reprise des
+              joints de dilatation et le nettoyage haute pression sont systématiquement effectués
+              avant l&apos;application de l&apos;enduit de finition.
+            </p>
+            <p>
+              La <strong>réhabilitation patrimoniale</strong> est au cœur de notre identité dans
+              l&apos;Hérault. Conforter une voûte en maçonnerie ancienne, reprendre des murs en
+              galets calcaires, rejointoyer à la chaux une façade en pierre de taille, restaurer
+              un escalier en pierre d&apos;Argelliers… Ces travaux de haute technicité exigent une
+              sensibilité au patrimoine que TMT Travaux a développée au fil de nombreux chantiers
+              de rénovation dans les villages médiévaux du cœur de l&apos;Hérault.
+            </p>
+            <p>
+              Pour une rénovation réussie dans l&apos;Hérault, faites confiance à une entreprise
+              locale qui connaît les spécificités du bâti de votre territoire.{" "}
+              <strong>Devis détaillé et visite technique gratuite sous 48 heures</strong> — TMT
+              Travaux intervient sur l&apos;ensemble du département 34.
             </p>
           </div>
         </div>

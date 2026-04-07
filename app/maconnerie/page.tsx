@@ -72,8 +72,8 @@ export default function MaconneriePage() {
               </span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
-              Maçonnerie &{" "}
-              <span className="text-gradient-gold">Gros Œuvre</span>
+              Maçonnerie &amp; Gros Œuvre{" "}
+              <span className="text-gradient-gold">dans l&apos;Hérault (34)</span>
             </h1>
             <p className="mt-6 text-lg text-white-warm/70 leading-relaxed max-w-2xl">
               TMT Travaux exécute l&apos;ensemble des travaux de maçonnerie nécessaires à la
@@ -169,27 +169,63 @@ export default function MaconneriePage() {
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-charcoal mb-8">
-            Maçonnerie dans l&apos;Hérault : un savoir-faire structurel
+            Maçonnerie dans l&apos;Hérault : savoir-faire structurel et patrimoine bâti
           </h2>
-          <div className="prose prose-lg max-w-none text-[var(--text-secondary)]">
+          <div className="prose prose-lg max-w-none text-[var(--text-secondary)] space-y-5">
             <p>
-              Le patrimoine bâti de l&apos;Hérault — des mas en pierre des garrigues aux constructions
-              contemporaines — requiert une double compétence : la maîtrise des techniques modernes
-              (béton armé, Eurocodes) et la connaissance des méthodes traditionnelles (maçonnerie de
-              pierre, mortier de chaux).
+              Le patrimoine bâti de l&apos;Hérault — des mas en pierre calcaire des garrigues aux
+              constructions contemporaines en béton armé — requiert une double compétence : la
+              maîtrise des techniques modernes (béton armé, Eurocodes, DTU) et la connaissance
+              des méthodes traditionnelles (maçonnerie de pierre, mortier de chaux hydraulique,
+              taille de pierre calcaire).
             </p>
             <p>
               TMT Travaux intervient à <strong>Paulhan</strong>, <strong>Clermont-l&apos;Hérault</strong>,{" "}
               <strong>Pézenas</strong>, <strong>Lodève</strong> et <strong>Gignac</strong> pour tous
               travaux de maçonnerie : construction neuve, extension, surélévation ou réhabilitation.
               L&apos;entreprise est couverte par une <strong>assurance décennale</strong> garantissant la
-              solidité des ouvrages réalisés.
+              solidité des ouvrages réalisés pendant 10 ans à compter de la réception du chantier.
+            </p>
+            <p>
+              Le <strong>gros œuvre</strong> constitue la colonne vertébrale de toute construction.
+              TMT Travaux réalise l&apos;ensemble des ouvrages porteurs : semelles filantes et isolées,
+              longrines béton armé, élévation de murs en parpaing (B40, B60, B80), chaînages
+              horizontaux et verticaux, linteaux, planchers poutrelles-hourdis. Chaque ouvrage est
+              réalisé selon les plans du bureau d&apos;études structure et les prescriptions des
+              Documents Techniques Unifiés applicables.
             </p>
             <p>
               En zone sismique — le département de l&apos;Hérault est classé en zone 2 (sismicité
               faible) à 3 (sismicité modérée) selon l&apos;arrêté du 22 octobre 2010 — nos
-              réalisations intègrent les dispositions constructives parasismiques requises par les
-              règles Eurocode 8 (NF EN 1998).
+              réalisations intègrent les dispositions constructives <strong>parasismiques</strong>{" "}
+              requises par les règles Eurocode 8 (NF EN 1998) : armatures de chaînage, dimensions
+              minimales des sections, ancrage des armatures et respect des dispositions
+              géométriques prescrites.
+            </p>
+            <p>
+              La construction de <strong>murs de clôture</strong> est une demande récurrente dans
+              les communes héraultaises. TMT Travaux réalise vos clôtures en parpaing enduit,
+              béton banché ou en pierre calcaire locale. Les fondations sont systématiquement
+              adaptées à la nature du sol (fouilles en tranchée, béton de propreté, semelle filante
+              armée) pour garantir la stabilité de l&apos;ouvrage sur le long terme, même sur
+              terrain en pente.
+            </p>
+            <p>
+              La <strong>taille de pierre</strong> et la maçonnerie traditionnelle constituent une
+              part importante de notre activité dans l&apos;Hérault, département aux traditions
+              architecturales fortes. Encadrements de baies, arcs en pierre de taille, chaînes
+              d&apos;angle, corniches, restauration de murs en pierre sèche : nos compagnons maçons
+              maîtrisent les techniques ancestrales qui font la singularité du bâti héraultais.
+              Les mortiers de chaux naturelle hydraulique (NHL) sont sélectionnés pour assurer
+              la compatibilité avec les maçonneries anciennes et permettre la respiration
+              naturelle des parois.
+            </p>
+            <p>
+              Pour tout projet de maçonnerie dans l&apos;Hérault — construction neuve, extension,
+              mur de clôture ou réhabilitation de bâti ancien —{" "}
+              <strong>contactez TMT Travaux pour un devis détaillé sous 48 heures</strong> après
+              visite technique. Notre équipe se déplace gratuitement sur l&apos;ensemble du
+              département pour évaluer votre projet.
             </p>
           </div>
         </div>

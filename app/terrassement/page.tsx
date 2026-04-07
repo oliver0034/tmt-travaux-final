@@ -72,8 +72,8 @@ export default function TerrassementPage() {
               </span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
-              Terrassement &{" "}
-              <span className="text-gradient-gold">Préparation de Terrain</span>
+              Terrassement &amp; VRD{" "}
+              <span className="text-gradient-gold">dans l&apos;Hérault (34)</span>
             </h1>
             <p className="mt-6 text-lg text-white-warm/70 leading-relaxed max-w-2xl">
               TMT Travaux assure l&apos;ensemble des opérations de terrassement nécessaires à la
@@ -162,28 +162,67 @@ export default function TerrassementPage() {
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-charcoal mb-8">
-            Terrassement dans l&apos;Hérault : expertise locale
+            Terrassement dans l&apos;Hérault : expertise locale et technique
           </h2>
-          <div className="prose prose-lg max-w-none text-[var(--text-secondary)]">
+          <div className="prose prose-lg max-w-none text-[var(--text-secondary)] space-y-5">
             <p>
               La géologie du département de l&apos;Hérault présente une diversité de sols — calcaires,
               argilo-calcaires, alluvionnaires — qui impose une connaissance approfondie des
               conditions géotechniques locales. TMT Travaux intervient à <strong>Paulhan</strong>,{" "}
               <strong>Clermont-l&apos;Hérault</strong>, <strong>Pézenas</strong>,{" "}
               <strong>Lodève</strong> et <strong>Gignac</strong> avec une maîtrise des
-              spécificités de chaque secteur.
+              spécificités de chaque secteur géologique.
             </p>
             <p>
               En zone argileuse — fréquente dans le bassin de l&apos;Hérault — le retrait-gonflement
-              des sols constitue un aléa majeur. Nos opérations de terrassement intègrent
-              systématiquement les recommandations issues des études de sol (missions G1 à G4) et
-              les prescriptions du Plan de Prévention des Risques (PPR) applicables à chaque commune.
+              des sols constitue un aléa majeur pour la pérennité des ouvrages. Nos opérations de
+              terrassement intègrent systématiquement les recommandations issues des études de sol
+              (missions G1 à G4) et les prescriptions du Plan de Prévention des Risques (PPR)
+              applicables à chaque commune du département.
+            </p>
+            <p>
+              Préparation de terrain pour maison individuelle, <strong>terrassement de piscine</strong>,
+              aménagement de terrain constructible, viabilisation de parcelle… Les interventions de
+              terrassement dans l&apos;Hérault couvrent un large spectre. TMT Travaux maîtrise chacune
+              de ces prestations : de la simple mise à niveau d&apos;un terrain agricole à la réalisation
+              complète de fouilles et fondations pour une construction neuve à Paulhan, Lodève ou Gignac.
+            </p>
+            <p>
+              Le terrassement manuel ou mécanisé est adapté aux contraintes d&apos;accès de chaque site.
+              Dans les villages médiévaux du centre-héraultais, où les engins de grande taille ne peuvent
+              accéder, nous utilisons des <strong>mini-pelles</strong> dont le gabarit réduit permet
+              d&apos;intervenir en milieu contraint sans altérer les propriétés voisines.
+            </p>
+            <p>
+              Les travaux de <strong>VRD — Voirie et Réseaux Divers</strong> — constituent un aspect
+              crucial de tout projet de construction ou d&apos;aménagement. TMT Travaux réalise la pose
+              des canalisations d&apos;eau potable, les tranchées pour réseaux électriques et télécom,
+              les branchements d&apos;assainissement et la création de voiries privées. Chaque intervention
+              est réalisée en coordination avec les concessionnaires (SDEI, Enedis, Orange) pour
+              garantir la conformité des raccordements.
+            </p>
+            <p>
+              La réalisation de <strong>fondations</strong> est une étape déterminante pour la pérennité
+              de tout ouvrage. Nos équipes réalisent les fouilles en pleine masse ou en tranchée, le
+              ferraillage selon les plans du bureau d&apos;études structure, et le coulage béton
+              conformément aux normes DTU 13.11 (semelles filantes) et DTU 13.12 (semelles isolées).
+              Une attention particulière est portée à la portance du sol et au respect des cotes
+              altimétriques définies par l&apos;architecte ou le maître d&apos;ouvrage.
+            </p>
+            <p>
+              L&apos;assainissement individuel est une problématique récurrente dans les communes rurales
+              de l&apos;Hérault. TMT Travaux dimensionne et installe vos systèmes d&apos;assainissement
+              non collectif (fosse septique, micro-station d&apos;épuration) en conformité avec les
+              préconisations du <strong>SPANC</strong> (Service Public d&apos;Assainissement Non
+              Collectif) de votre commune, garantissant la conformité de votre installation lors de
+              toute transaction immobilière.
             </p>
             <p>
               Que votre projet concerne la construction d&apos;une maison individuelle, l&apos;aménagement
               d&apos;un terrain viabilisé ou la création d&apos;un accès, notre équipe dispose des engins
               et de l&apos;expertise nécessaires pour mener à bien chaque phase du terrassement dans
-              le respect des délais et du budget définis.
+              le respect des délais et du budget définis. <strong>Devis gratuit sous 48 heures</strong>{" "}
+              après visite technique sur votre terrain.
             </p>
           </div>
         </div>

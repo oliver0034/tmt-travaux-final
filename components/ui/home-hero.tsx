@@ -23,13 +23,14 @@ export default function HomeHero() {
       {/* Content revealed after expansion */}
       <div className="max-w-4xl mx-auto text-center py-8">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-charcoal leading-tight mb-6">
-          Des fondations solides,{' '}
-          <span className="text-gradient-gold">des projets durables</span>
+          Entreprise de Maçonnerie &amp; Terrassement dans l&apos;Hérault —{' '}
+          <span className="text-gradient-gold">TMT Travaux</span>
         </h1>
         <p className="text-lg text-[var(--text-secondary)] leading-relaxed max-w-2xl mx-auto mb-10">
-          TMT Travaux conçoit et réalise vos projets de construction, terrassement et
-          rénovation dans l&apos;Hérault. Fondations, gros œuvre, VRD : chaque intervention
-          repose sur une expertise technique rigoureuse et une exécution conforme aux normes DTU.
+          TMT Travaux réalise vos projets de maçonnerie, terrassement et rénovation dans l&apos;Hérault (34).
+          Fondations, gros œuvre, VRD, extension de maison : chaque intervention repose sur une expertise
+          technique rigoureuse, une garantie décennale et une exécution conforme aux normes DTU.
+          Devis gratuit sous 48h — intervention à Paulhan, Clermont-l&apos;Hérault, Pézenas, Lodève, Gignac.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <AnimatedButton href="/contact" variant="gold" label="Demander un Devis Gratuit" />

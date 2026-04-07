@@ -293,9 +293,14 @@ function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-white-warm/40">
-            © {new Date().getFullYear()} TMT Travaux — Terrassement, Maçonnerie, Travaux. Tous droits réservés.
-          </p>
+          <div>
+            <p className="text-xs text-white-warm/40">
+              © {new Date().getFullYear()} TMT Travaux — Terrassement, Maçonnerie, Travaux. Tous droits réservés.
+            </p>
+            <p className="text-xs text-white-warm/25 mt-1">
+              SIRET : [À compléter] — Assurance décennale souscrite — Garantie décennale art. L.241-1 Code des assurances
+            </p>
+          </div>
           <div className="flex gap-6 text-xs text-white-warm/40">
             <Link href="/mentions-legales" className="hover:text-gold transition-colors">
               Mentions légales
