@@ -1,26 +1,235 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --gold: #C9A227;
+  --gold-light: #D4B94E;
+  --gold-dark: #A88620;
+  --steel: #8B8B8B;
+  --steel-light: #A8A8A8;
+  --steel-dark: #6B6B6B;
+  --charcoal: #1A1A1A;
+  --black-deep: #0A0A0A;
+  --white-warm: #F5F0E8;
+  --white-pure: #FAFAFA;
+  --bg-light: #F7F5F0;
+  --bg-section: #EFEFEB;
+  --text-primary: #1A1A1A;
+  --text-secondary: #4A4A4A;
+  --text-muted: #7A7A7A;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+  --color-steel: var(--steel);
+  --color-steel-light: var(--steel-light);
+  --color-steel-dark: var(--steel-dark);
+  --color-charcoal: var(--charcoal);
+  --color-black-deep: var(--black-deep);
+  --color-white-warm: var(--white-warm);
+  --color-bg-light: var(--bg-light);
+  --color-bg-section: var(--bg-section);
+  --font-sans: "Inter", "Montserrat", system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--white-pure);
+  color: var(--text-primary);
+  font-family: "Inter", "Montserrat", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Premium Gold Gradient */
+.gradient-gold {
+  background: linear-gradient(135deg, #A88620 0%, #C9A227 40%, #D4B94E 70%, #C9A227 100%);
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #C9A227 0%, #D4B94E 50%, #C9A227 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Steel/Metal effect */
+.gradient-steel {
+  background: linear-gradient(135deg, #6B6B6B 0%, #A8A8A8 50%, #8B8B8B 100%);
+}
+
+.text-gradient-steel {
+  background: linear-gradient(135deg, #6B6B6B 0%, #A8A8A8 50%, #8B8B8B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 3D Card Effect */
+.card-3d {
+  transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-3d:hover {
+  transform: perspective(1000px) rotateY(-2deg) rotateX(2deg) translateY(-8px);
+  box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.15), -5px -5px 20px rgba(255, 255, 255, 0.8);
+}
+
+/* Premium shadow */
+.shadow-premium {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-premium-lg {
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* Animated underline */
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* Section divider */
+.divider-gold {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  border-radius: 2px;
+}
+
+/* Hero overlay */
+.hero-overlay {
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.85) 0%, rgba(26, 26, 26, 0.7) 50%, rgba(10, 10, 10, 0.85) 100%);
+}
+
+/* ===================================================
+   Animated CTA Buttons
+   =================================================== */
+
+/* Letter animations */
+@keyframes anim-letter-gold {
+  0%, 100% { opacity: 0.78; }
+  50% { opacity: 1; text-shadow: 0 0 8px rgba(255, 255, 255, 0.5); }
+}
+
+@keyframes anim-letter-dark {
+  0%, 100% { color: rgba(245, 240, 232, 0.6); }
+  50% { color: #F5F0E8; text-shadow: 0 0 8px rgba(201, 162, 39, 0.9); }
+}
+
+@keyframes anim-letter-light {
+  0%, 100% { color: rgba(26, 26, 26, 0.65); }
+  50% { color: #1A1A1A; text-shadow: 0 0 4px rgba(201, 162, 39, 0.35); }
+}
+
+@keyframes anim-icon-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.12); opacity: 1; }
+}
+
+/* Base letter class */
+.anim-letter {
+  display: inline-block;
+  animation-duration: 2.6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.anim-letter-gold { animation-name: anim-letter-gold; }
+.anim-letter-dark  { animation-name: anim-letter-dark; }
+.anim-letter-light { animation-name: anim-letter-light; }
+
+/* Icon pulse */
+.anim-icon {
+  transition: filter 0.3s;
+}
+.anim-icon svg {
+  animation: anim-icon-pulse 2.2s ease-in-out infinite;
+}
+
+/* Base wrapper — needed for ::before / ::after */
+.anim-cta {
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.35s ease, border-color 0.3s ease, color 0.3s ease, opacity 0.25s ease;
+}
+
+.anim-cta::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+/* ── Gold variant ── */
+.anim-cta-gold::after {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.38) 0%, transparent 55%);
+}
+.anim-cta-gold:hover::after { opacity: 1; }
+.anim-cta-gold:hover {
+  box-shadow: 0 0 24px rgba(201, 162, 39, 0.55), 0 0 48px rgba(201, 162, 39, 0.2);
+  opacity: 0.94;
+}
+.anim-cta-gold:active {
+  box-shadow: 0 0 32px rgba(201, 162, 39, 0.75), inset 0 2px 6px rgba(0,0,0,0.18);
+}
+.anim-cta-gold:hover .anim-icon svg {
+  animation: none;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.9));
+}
+
+/* ── Dark variant (dark bg, gold border, white text) ── */
+.anim-cta-dark::after {
+  background: linear-gradient(to bottom, rgba(201, 162, 39, 0.12) 0%, transparent 65%);
+}
+.anim-cta-dark:hover::after { opacity: 1; }
+.anim-cta-dark:hover {
+  border-color: rgba(201, 162, 39, 0.7) !important;
+  color: #C9A227 !important;
+  box-shadow: 0 0 18px rgba(201, 162, 39, 0.28), inset 0 0 18px rgba(201, 162, 39, 0.06);
+}
+.anim-cta-dark:hover .anim-letter { animation: none; color: #C9A227; }
+.anim-cta-dark:active {
+  box-shadow: 0 0 28px rgba(201, 162, 39, 0.5);
+}
+.anim-cta-dark:hover .anim-icon svg {
+  animation: none;
+  filter: drop-shadow(0 0 4px rgba(201, 162, 39, 0.95));
+}
+
+/* ── Light variant (light bg, charcoal border, charcoal text) ── */
+.anim-cta-light::after {
+  background: linear-gradient(to bottom, rgba(201, 162, 39, 0.08) 0%, transparent 60%);
+}
+.anim-cta-light:hover::after { opacity: 1; }
+.anim-cta-light:hover {
+  border-color: rgba(201, 162, 39, 0.55) !important;
+  color: #C9A227 !important;
+  box-shadow: 0 0 14px rgba(201, 162, 39, 0.18);
+}
+.anim-cta-light:hover .anim-letter { animation: none; color: #C9A227; }
+.anim-cta-light:active {
+  box-shadow: 0 0 20px rgba(201, 162, 39, 0.35);
 }
