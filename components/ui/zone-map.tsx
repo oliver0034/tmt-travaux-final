@@ -8,6 +8,11 @@ const cities = [
   { name: "Pézenas", lng: 3.4242, lat: 43.4622, isBase: false },
   { name: "Lodève", lng: 3.3200, lat: 43.7317, isBase: false },
   { name: "Gignac", lng: 3.5483, lat: 43.6522, isBase: false },
+  { name: "Montpellier", lng: 3.8767, lat: 43.6108, isBase: false },
+  { name: "Béziers", lng: 3.2157, lat: 43.3443, isBase: false },
+  { name: "Sète", lng: 3.6939, lat: 43.4035, isBase: false },
+  { name: "Mèze", lng: 3.6056, lat: 43.4278, isBase: false },
+  { name: "Agde", lng: 3.4747, lat: 43.3097, isBase: false },
   { name: "Saint-Pargoire\n(siège TMT)", lng: 3.4500, lat: 43.5167, isBase: true },
 ];
 
@@ -39,11 +44,10 @@ function generateCircleGeoJSON(
 
 const circleData: GeoJSON.FeatureCollection = {
   type: "FeatureCollection",
-  features: [generateCircleGeoJSON(3.45, 43.59, 40)],
+  features: [generateCircleGeoJSON(3.55, 43.50, 55)],
 };
 
-// Montpellier label position for reference
-const MAP_CENTER: [number, number] = [3.43, 43.59];
+const MAP_CENTER: [number, number] = [3.55, 43.50];
 
 export default function ZoneMap() {
   return (
@@ -51,7 +55,7 @@ export default function ZoneMap() {
       <Map
         mapStyle="https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json"
         center={MAP_CENTER}
-        zoom={9.2}
+        zoom={8.4}
         minZoom={7}
         maxZoom={14}
         scrollZoom={false}
@@ -137,7 +141,7 @@ export default function ZoneMap() {
         </div>
         <div className="flex items-center gap-2">
           <div className="w-5 h-0 border-t-2 border-dashed border-gold/70" />
-          <span className="text-white/70">Zone ~40 km</span>
+          <span className="text-white/70">Zone ~55 km</span>
         </div>
       </div>
     </div>
