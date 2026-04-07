@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import ScrollExpandMedia from '@/components/ui/scroll-expansion-hero';
 import AnimatedButton from '@/components/ui/animated-button';
+import { BASE_PATH } from '@/lib/config';
 
 export default function HomeHero() {
   useEffect(() => {
@@ -12,7 +13,7 @@ export default function HomeHero() {
   return (
     <ScrollExpandMedia
       mediaType="image"
-      mediaSrc="/logo-tmt.png"
+      mediaSrc={`${BASE_PATH}/logo-tmt.png`}
       bgImageSrc="https://images.pexels.com/photos/6245621/pexels-photo-6245621.jpeg?auto=compress&cs=tinysrgb&w=1920"
       title="Maçonnerie & Terrassement"
       date="Hérault (34) — Garantie Décennale"

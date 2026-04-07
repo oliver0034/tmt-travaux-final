@@ -3,6 +3,7 @@ import { Inter, Montserrat } from "next/font/google";
 import Link from "next/link";
 import Image from "next/image";
 import AnimatedButton from "@/components/ui/animated-button";
+import { BASE_PATH } from "@/lib/config";
 import "./globals.css";
 
 const inter = Inter({
@@ -80,7 +81,7 @@ function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center shrink-0 -ml-2">
             <Image
-              src="/logo-tmt.png"
+              src={`${BASE_PATH}/logo-tmt.png`}
               alt="TMT Travaux — Terrassement Maçonnerie Travaux"
               width={400}
               height={133}
@@ -196,7 +197,7 @@ function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Image
-              src="/logo-tmt.png"
+              src={`${BASE_PATH}/logo-tmt.png`}
               alt="TMT Travaux"
               width={160}
               height={53}

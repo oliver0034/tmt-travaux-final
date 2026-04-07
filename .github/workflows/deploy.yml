@@ -32,6 +32,8 @@ jobs:
 
       - name: Build Next.js
         run: npm run build
+        env:
+          NEXT_PUBLIC_BASE_PATH: /tmt-travaux-final
 
       - name: Désactiver Jekyll (nécessaire pour _next/)
         run: touch ./out/.nojekyll
