@@ -55,8 +55,8 @@ export default function MentionsLegalesPage() {
                 <a href="tel:+33748157160" className="text-gold hover:underline">07 48 15 71 60</a>
               </p>
               <p><strong className="text-charcoal">E-mail :</strong>{" "}
-                <a href="mailto:tmt-travaux34@gmail.com" className="text-gold hover:underline">
-                  tmt-travaux34@gmail.com
+                <a href="mailto:tmt.travaux34@gmail.com" className="text-gold hover:underline">
+                  tmt.travaux34@gmail.com
                 </a>
               </p>
               <p><strong className="text-charcoal">SIRET :</strong> [À compléter]</p>
@@ -178,8 +178,8 @@ export default function MentionsLegalesPage() {
               </p>
               <p>
                 Pour exercer ces droits, contactez-nous à :{" "}
-                <a href="mailto:tmt-travaux34@gmail.com" className="text-gold hover:underline">
-                  tmt-travaux34@gmail.com
+                <a href="mailto:tmt.travaux34@gmail.com" className="text-gold hover:underline">
+                  tmt.travaux34@gmail.com
                 </a>
               </p>
               <p>
