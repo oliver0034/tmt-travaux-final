@@ -2,6 +2,7 @@
 const nextConfig = {
   output: "export",
   trailingSlash: true,
+  basePath: "/tmt-travaux-final",
   images: {
     unoptimized: true,
     remotePatterns: [
