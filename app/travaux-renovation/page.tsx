@@ -3,9 +3,9 @@ import Image from "next/image";
 import AnimatedButton from "@/components/ui/animated-button";
 
 export const metadata: Metadata = {
-  title: "Travaux & Rénovation dans l'Hérault (34) — Extension, IPN, Façades",
+  title: "Rénovation & Extension de Maison Hérault (34) | Pose IPN | TMT Travaux",
   description:
-    "TMT Travaux réalise vos travaux de rénovation dans l'Hérault : extension de maison, pose d'IPN, rénovation de façades, aménagement global. Paulhan, Clermont-l'Hérault, Pézenas. Garantie décennale.",
+    "Rénovation et extension de maison dans le 34. Pose d'IPN, ouverture mur porteur, ravalement façade à Montpellier, Béziers et Sète. Garantie décennale. Devis gratuit 48h.",
   alternates: {
     canonical: "https://tmt-travaux-herault.fr/travaux-renovation",
   },
@@ -97,7 +97,7 @@ export default function TravauxRenovationPage() {
               Nos Prestations
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-charcoal">
-              Rénovation & aménagement : une approche globale
+              Rénovation &amp; extension de maison à Montpellier, Béziers et Sète
             </h2>
             <div className="divider-gold mx-auto mt-6" />
           </div>

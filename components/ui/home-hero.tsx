@@ -23,7 +23,7 @@ export default function HomeHero() {
       {/* Content revealed after expansion */}
       <div className="max-w-4xl mx-auto text-center py-6 px-4">
         <h1 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold tracking-tight text-charcoal leading-tight mb-5">
-          Entreprise de Maçonnerie &amp; Terrassement dans l&apos;Hérault —{' '}
+          Entreprise de Rénovation et Travaux de Bâtiment dans l&apos;Hérault (34) —{' '}
           <span className="text-gradient-gold">TMT Travaux</span>
         </h1>
         <p className="text-base sm:text-lg text-[var(--text-secondary)] leading-relaxed max-w-2xl mx-auto mb-8">

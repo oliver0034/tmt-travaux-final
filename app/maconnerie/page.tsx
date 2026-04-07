@@ -3,9 +3,9 @@ import Image from "next/image";
 import AnimatedButton from "@/components/ui/animated-button";
 
 export const metadata: Metadata = {
-  title: "Maçonnerie dans l'Hérault (34) — Gros Œuvre, Béton Armé, Pierre",
+  title: "Maçonnerie Générale Hérault (34) | Gros Œuvre & Rénovation | TMT Travaux",
   description:
-    "TMT Travaux : maçonnerie générale et gros œuvre dans l'Hérault (34). Béton armé, murs porteurs, murs de clôture, taille de pierre. Intervention à Paulhan, Clermont-l'Hérault, Pézenas, Lodève. Garantie décennale.",
+    "Expert maçon dans le 34. Extension, ouverture de mur porteur et maçonnerie paysagère à Montpellier, Béziers et Sète. Garantie décennale. Devis gratuit.",
   alternates: {
     canonical: "https://tmt-travaux-herault.fr/maconnerie",
   },
@@ -72,14 +72,14 @@ export default function MaconneriePage() {
               </span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
-              Maçonnerie &amp; Gros Œuvre{" "}
+              Entreprise de Maçonnerie Générale{" "}
               <span className="text-gradient-gold">dans l&apos;Hérault (34)</span>
             </h1>
             <p className="mt-6 text-lg text-white-warm/70 leading-relaxed max-w-2xl">
-              TMT Travaux exécute l&apos;ensemble des travaux de maçonnerie nécessaires à la
-              construction et à la rénovation de bâtiments dans l&apos;Hérault. Du béton armé
-              structurel à la taille de pierre traditionnelle, chaque ouvrage est réalisé dans le
-              respect des normes Eurocodes et DTU.
+              Spécialiste de la maçonnerie générale dans l&apos;Hérault, TMT Travaux accompagne les
+              particuliers et les professionnels dans tous leurs projets de construction et de
+              rénovation. Extension de maison, réfection de façade en pierre, travaux de structure
+              lourde — nous intervenons de <strong>Montpellier à Béziers</strong> en passant par Sète.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <AnimatedButton href="/contact" variant="gold" label="Devis Maçonnerie Gratuit" />
@@ -97,7 +97,7 @@ export default function MaconneriePage() {
               Nos Prestations
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-charcoal">
-              Maçonnerie : du gros œuvre à la finition
+              Vos travaux de gros œuvre et second œuvre à Montpellier et Béziers
             </h2>
             <div className="divider-gold mx-auto mt-6" />
           </div>
@@ -128,15 +128,15 @@ export default function MaconneriePage() {
         </div>
       </section>
 
-      {/* Matériaux */}
+      {/* Pourquoi TMT */}
       <section className="py-24 bg-bg-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-sm font-semibold uppercase tracking-widest text-gold mb-3">
-              Matériaux & Techniques
+              Nos Engagements
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-charcoal">
-              Une maîtrise technique complète
+              Pourquoi confier votre maçonnerie à TMT Travaux Hérault ?
             </h2>
             <div className="divider-gold mx-auto mt-6" />
           </div>
@@ -144,19 +144,27 @@ export default function MaconneriePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: "Parpaing & Brique",
-                desc: "Maçonnerie d'élévation en blocs béton (B40, B60, B80) ou briques terre cuite. Choix du matériau adapté aux exigences thermiques et structurelles du projet.",
+                icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
+                title: "La Garantie Décennale",
+                desc: "Tous nos ouvrages de maçonnerie sont couverts pendant 10 ans. Fondations, murs porteurs, extensions : votre investissement est protégé conformément à l'article L.241-1 du Code des assurances.",
               },
               {
-                title: "Pierre Naturelle",
-                desc: "Mise en œuvre de la pierre calcaire locale, taillée ou éclatée. Mortiers de chaux formulés pour assurer la compatibilité avec les maçonneries anciennes.",
+                icon: "M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z",
+                title: "La Propreté du Chantier",
+                desc: "Site propre et sécurisé à chaque fin de journée. Protection des abords, évacuation régulière des déchets en filières agréées, remise en état complète à la réception.",
               },
               {
-                title: "Béton Banché",
-                desc: "Coffrage et coulage de murs en béton banché pour structures porteuses, murs de soutènement ou clôtures. Finition brute, lissée ou désactivée selon le projet.",
+                icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+                title: "Le Respect des Délais",
+                desc: "Planification rigoureuse de chaque phase de chantier. Devis détaillé avec planning prévisionnel remis sous 48 heures. Intervention rapide dans tout l'Hérault.",
               },
             ].map((item) => (
               <div key={item.title} className="bg-white rounded-2xl p-8 shadow-premium">
+                <div className="w-12 h-12 rounded-xl gradient-gold flex items-center justify-center mb-5">
+                  <svg className="w-6 h-6 text-black-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
+                  </svg>
+                </div>
                 <h3 className="text-lg font-bold text-charcoal mb-3">{item.title}</h3>
                 <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{item.desc}</p>
               </div>
@@ -169,63 +177,55 @@ export default function MaconneriePage() {
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-charcoal mb-8">
-            Maçonnerie dans l&apos;Hérault : savoir-faire structurel et patrimoine bâti
+            Maçonnerie générale dans l&apos;Hérault : gros œuvre, second œuvre et maçonnerie paysagère
           </h2>
           <div className="prose prose-lg max-w-none text-[var(--text-secondary)] space-y-5">
             <p>
-              Le patrimoine bâti de l&apos;Hérault — des mas en pierre calcaire des garrigues aux
-              constructions contemporaines en béton armé — requiert une double compétence : la
-              maîtrise des techniques modernes (béton armé, Eurocodes, DTU) et la connaissance
-              des méthodes traditionnelles (maçonnerie de pierre, mortier de chaux hydraulique,
-              taille de pierre calcaire).
+              Le <strong>gros œuvre</strong> est la colonne vertébrale de votre habitation. Chez TMT Travaux,
+              nous maîtrisons l&apos;ensemble des techniques constructives pour garantir la pérennité
+              de votre bâti. Chaque chantier est mené dans le respect strict des normes <strong>RT2020</strong>{" "}
+              et des règles de l&apos;art, de Montpellier à Béziers en passant par Sète et Clermont-l&apos;Hérault.
+            </p>
+            <ul className="space-y-3 mt-4">
+              {[
+                { label: "Ouverture de murs porteurs", detail: "Pose d'IPN pour créer des espaces de vie ouverts et lumineux en toute sécurité. Note de calcul bureau d'études fournie." },
+                { label: "Extensions et surélévations", detail: "Agrandissement de votre surface habitable avec une intégration parfaite à l'existant. Étude structurelle préalable systématique." },
+                { label: "Maçonnerie paysagère", detail: "Construction de murets, piliers de portail et terrasses en béton désactivé ou carrelées. Finitions soignées intégrées au paysage." },
+                { label: "Rénovation de bâti ancien", detail: "Travail de la pierre et enduits traditionnels pour préserver le charme de l'architecture héraultaise. Mortiers de chaux NHL compatibles." },
+              ].map((item) => (
+                <li key={item.label} className="flex gap-3">
+                  <svg className="w-5 h-5 text-gold shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span><strong>{item.label}</strong> : {item.detail}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6">
+              Le département de l&apos;Hérault est classé en <strong>zone sismique 2 à 3</strong> (arrêté du
+              22 octobre 2010). Toutes nos réalisations intègrent les dispositions constructives parasismiques
+              requises par l&apos;Eurocode 8 (NF EN 1998) : armatures de chaînage, dimensions minimales des
+              sections, ancrage des armatures. Votre sécurité est notre priorité absolue.
             </p>
             <p>
-              TMT Travaux intervient à <strong>Paulhan</strong>, <strong>Clermont-l&apos;Hérault</strong>,{" "}
-              <strong>Pézenas</strong>, <strong>Lodève</strong> et <strong>Gignac</strong> pour tous
-              travaux de maçonnerie : construction neuve, extension, surélévation ou réhabilitation.
-              L&apos;entreprise est couverte par une <strong>assurance décennale</strong> garantissant la
-              solidité des ouvrages réalisés pendant 10 ans à compter de la réception du chantier.
+              La construction de <strong>murs de clôture à Montpellier, Béziers ou Sète</strong> est une
+              demande récurrente. Nous réalisons vos clôtures en parpaing enduit, béton banché ou pierre
+              calcaire locale avec des fondations adaptées à chaque nature de sol. En terrain argileux —
+              fréquent dans la plaine héraultaise — nous prenons en compte l&apos;aléa retrait-gonflement
+              et dimensionnons les semelles en conséquence.
             </p>
             <p>
-              Le <strong>gros œuvre</strong> constitue la colonne vertébrale de toute construction.
-              TMT Travaux réalise l&apos;ensemble des ouvrages porteurs : semelles filantes et isolées,
-              longrines béton armé, élévation de murs en parpaing (B40, B60, B80), chaînages
-              horizontaux et verticaux, linteaux, planchers poutrelles-hourdis. Chaque ouvrage est
-              réalisé selon les plans du bureau d&apos;études structure et les prescriptions des
-              Documents Techniques Unifiés applicables.
+              Notre expertise en <strong>taille de pierre et maçonnerie traditionnelle</strong> nous distingue
+              dans l&apos;Hérault. Encadrements de baies, arcs, chaînes d&apos;angle, restauration de mas en
+              pierres sèches : nous maîtrisons les techniques ancestrales qui font la singularité du bâti
+              languedocien. Nos mortiers de chaux naturelle hydraulique (NHL) garantissent la compatibilité
+              et la respirabilité des maçonneries anciennes.
             </p>
             <p>
-              En zone sismique — le département de l&apos;Hérault est classé en zone 2 (sismicité
-              faible) à 3 (sismicité modérée) selon l&apos;arrêté du 22 octobre 2010 — nos
-              réalisations intègrent les dispositions constructives <strong>parasismiques</strong>{" "}
-              requises par les règles Eurocode 8 (NF EN 1998) : armatures de chaînage, dimensions
-              minimales des sections, ancrage des armatures et respect des dispositions
-              géométriques prescrites.
-            </p>
-            <p>
-              La construction de <strong>murs de clôture</strong> est une demande récurrente dans
-              les communes héraultaises. TMT Travaux réalise vos clôtures en parpaing enduit,
-              béton banché ou en pierre calcaire locale. Les fondations sont systématiquement
-              adaptées à la nature du sol (fouilles en tranchée, béton de propreté, semelle filante
-              armée) pour garantir la stabilité de l&apos;ouvrage sur le long terme, même sur
-              terrain en pente.
-            </p>
-            <p>
-              La <strong>taille de pierre</strong> et la maçonnerie traditionnelle constituent une
-              part importante de notre activité dans l&apos;Hérault, département aux traditions
-              architecturales fortes. Encadrements de baies, arcs en pierre de taille, chaînes
-              d&apos;angle, corniches, restauration de murs en pierre sèche : nos compagnons maçons
-              maîtrisent les techniques ancestrales qui font la singularité du bâti héraultais.
-              Les mortiers de chaux naturelle hydraulique (NHL) sont sélectionnés pour assurer
-              la compatibilité avec les maçonneries anciennes et permettre la respiration
-              naturelle des parois.
-            </p>
-            <p>
-              Pour tout projet de maçonnerie dans l&apos;Hérault — construction neuve, extension,
-              mur de clôture ou réhabilitation de bâti ancien —{" "}
-              <strong>contactez TMT Travaux pour un devis détaillé sous 48 heures</strong> après
-              visite technique. Notre équipe se déplace gratuitement sur l&apos;ensemble du
-              département pour évaluer votre projet.
+              Pour tout projet de <strong>maçonnerie dans l&apos;Hérault</strong> — à Montpellier, Béziers,
+              Sète, Mèze, Agde ou Clermont-l&apos;Hérault —{" "}
+              <strong>contactez TMT Travaux pour un devis détaillé sous 48 heures</strong> après visite
+              technique gratuite. Tous nos ouvrages sont couverts par une garantie décennale.
             </p>
           </div>
         </div>
@@ -311,22 +311,27 @@ export default function MaconneriePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            name: "Maçonnerie — TMT Travaux",
+            name: "Maçonnerie Générale Hérault — TMT Travaux",
             provider: {
               "@type": "HomeAndConstructionBusiness",
               name: "TMT Travaux",
               url: "https://tmt-travaux-herault.fr",
+              telephone: "+33748157160",
+              email: "tmt.travaux34@gmail.com",
             },
             description:
-              "Maçonnerie générale et gros œuvre dans l'Hérault : béton armé, murs porteurs, murs de clôture, taille de pierre. Garantie décennale.",
+              "Expert maçon dans le 34. Extension, ouverture de mur porteur, maçonnerie paysagère à Montpellier, Béziers, Sète. Normes RT2020, Eurocodes. Garantie décennale.",
             areaServed: [
+              { "@type": "City", name: "Montpellier" },
+              { "@type": "City", name: "Béziers" },
+              { "@type": "City", name: "Sète" },
               { "@type": "City", name: "Paulhan" },
               { "@type": "City", name: "Clermont-l'Hérault" },
               { "@type": "City", name: "Pézenas" },
               { "@type": "City", name: "Lodève" },
               { "@type": "City", name: "Gignac" },
             ],
-            serviceType: "Maçonnerie",
+            serviceType: "Maçonnerie Générale",
           }),
         }}
       />

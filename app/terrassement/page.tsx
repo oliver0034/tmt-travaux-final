@@ -3,9 +3,9 @@ import Image from "next/image";
 import AnimatedButton from "@/components/ui/animated-button";
 
 export const metadata: Metadata = {
-  title: "Terrassement dans l'Hérault (34) — Paulhan, Clermont-l'Hérault, Pézenas",
+  title: "Terrassement & VRD Hérault (34) | Fondations & Réseaux | TMT Travaux",
   description:
-    "TMT Travaux réalise vos travaux de terrassement dans l'Hérault : préparation de terrain, nivellement, décaissement, fondations, VRD. Intervention à Paulhan, Clermont-l'Hérault, Pézenas, Lodève, Gignac. Devis gratuit.",
+    "Entreprise de terrassement dans le 34. Fondations, VRD, assainissement à Montpellier, Béziers, Sète et Clermont-l'Hérault. Normes DTU respectées. Devis gratuit sous 48h.",
   alternates: {
     canonical: "https://tmt-travaux-herault.fr/terrassement",
   },
@@ -97,7 +97,7 @@ export default function TerrassementPage() {
               Nos Prestations
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-charcoal">
-              Terrassement : de la fouille à la finition
+              Travaux de terrassement &amp; VRD à Montpellier, Béziers et Sète
             </h2>
             <div className="divider-gold mx-auto mt-6" />
           </div>
