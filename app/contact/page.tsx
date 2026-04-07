@@ -304,10 +304,10 @@ export default function ContactPage() {
                         d&apos;un droit d&apos;accès, de rectification et de suppression de vos données
                         en contactant{" "}
                         <a
-                          href="mailto:boutieres.j@laposte.net"
+                          href="mailto:tmt-travaux34@gmail.com"
                           className="text-gold hover:underline"
                         >
-                          boutieres.j@laposte.net
+                          tmt-travaux34@gmail.com
                         </a>
                         . <span className="text-red-500">*</span>
                       </label>
@@ -347,8 +347,8 @@ export default function ContactPage() {
                     </svg>
                     <div>
                       <p className="font-semibold text-charcoal">E-mail</p>
-                      <a href="mailto:boutieres.j@laposte.net" className="hover:text-gold transition-colors break-all">
-                        boutieres.j@laposte.net
+                      <a href="mailto:tmt-travaux34@gmail.com" className="hover:text-gold transition-colors break-all">
+                        tmt-travaux34@gmail.com
                       </a>
                     </div>
                   </li>
@@ -432,7 +432,7 @@ export default function ContactPage() {
               "@type": "HomeAndConstructionBusiness",
               name: "TMT Travaux",
               telephone: "+33748157160",
-              email: "boutieres.j@laposte.net",
+              email: "tmt-travaux34@gmail.com",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Lafon de Lacan",

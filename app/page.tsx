@@ -280,13 +280,13 @@ export default function HomePage() {
             <p className="text-sm font-semibold uppercase tracking-widest text-gold mb-3">
               Zone d&apos;Intervention
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white">
-              Maçonnerie & terrassement dans tout l&apos;Hérault
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
+              Maçonnerie &amp; terrassement<br className="sm:hidden" /> dans tout l&apos;Hérault
             </h2>
             <div className="divider-gold mx-auto mt-6" />
-            <p className="mt-6 text-lg text-white-warm/60 max-w-2xl mx-auto">
-              Basés à Saint-Pargoire (34230), nous intervenons dans un rayon de 40 km couvrant les
-              principales communes du cœur de l&apos;Hérault.
+            <p className="mt-6 text-base sm:text-lg text-white-warm/60 max-w-2xl mx-auto">
+              Basés à Saint-Pargoire (34230), nous intervenons dans un rayon de 55 km couvrant
+              l&apos;ensemble du département de l&apos;Hérault.
             </p>
           </div>
 

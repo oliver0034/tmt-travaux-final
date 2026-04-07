@@ -55,8 +55,8 @@ export default function PolitiqueConfidentialitePage() {
               <p>Lafon de Lacan, 34230 Saint-Pargoire</p>
               <p>
                 E-mail :{" "}
-                <a href="mailto:boutieres.j@laposte.net" className="text-gold hover:underline">
-                  boutieres.j@laposte.net
+                <a href="mailto:tmt-travaux34@gmail.com" className="text-gold hover:underline">
+                  tmt-travaux34@gmail.com
                 </a>
               </p>
               <p>
@@ -188,8 +188,8 @@ export default function PolitiqueConfidentialitePage() {
               </ul>
               <p>
                 Pour exercer ces droits, adressez votre demande par e-mail à :{" "}
-                <a href="mailto:boutieres.j@laposte.net" className="text-gold hover:underline">
-                  boutieres.j@laposte.net
+                <a href="mailto:tmt-travaux34@gmail.com" className="text-gold hover:underline">
+                  tmt-travaux34@gmail.com
                 </a>
                 , en précisant votre identité. Nous nous engageons à vous répondre dans un délai
                 d&apos;un mois.
