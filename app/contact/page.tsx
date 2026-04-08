@@ -82,6 +82,8 @@ export default function ContactPage() {
 
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [sendError, setSendError] = useState(false);
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -94,14 +96,47 @@ export default function ContactPage() {
     }
   }
 
-  function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault();
     const validationErrors = validateForm(formData);
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
     }
-    setSubmitted(true);
+
+    setLoading(true);
+    setSendError(false);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: "10bae78c-8445-48a3-88e8-8d95792ffd22",
+          subject: `Demande de devis — ${formData.service} — ${formData.commune}`,
+          from_name: `${formData.prenom} ${formData.nom}`,
+          replyto: formData.email,
+          nom: formData.nom,
+          prenom: formData.prenom,
+          email: formData.email,
+          telephone: formData.telephone,
+          commune: formData.commune,
+          service: formData.service,
+          message: formData.message,
+        }),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setSubmitted(true);
+      } else {
+        setSendError(true);
+      }
+    } catch {
+      setSendError(true);
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -315,10 +350,17 @@ export default function ContactPage() {
                     {errors.rgpd && <p className="mt-2 text-sm text-red-500">{errors.rgpd}</p>}
                   </div>
 
+                  {sendError && (
+                    <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-sm text-red-700">
+                      Une erreur est survenue lors de l&apos;envoi. Veuillez réessayer ou nous contacter directement à{" "}
+                      <a href="mailto:tmt.travaux34@gmail.com" className="underline font-medium">tmt.travaux34@gmail.com</a>.
+                    </div>
+                  )}
+
                   <AnimatedButton
                     type="submit"
                     variant="gold"
-                    label="Envoyer ma Demande de Devis"
+                    label={loading ? "Envoi en cours…" : "Envoyer ma Demande de Devis"}
                     className="w-full sm:w-auto px-12"
                   />
                 </form>
