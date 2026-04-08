@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import Link from "next/link";
 import Image from "next/image";
-import AnimatedButton from "@/components/ui/animated-button";
+import Header from "@/components/ui/header";
 import { BASE_PATH } from "@/lib/config";
 import "./globals.css";
 
@@ -65,103 +65,6 @@ export const metadata: Metadata = {
   },
 };
 
-const navigation = [
-  { name: "Accueil", href: "/" },
-  { name: "Terrassement", href: "/terrassement" },
-  { name: "Maçonnerie", href: "/maconnerie" },
-  { name: "Travaux & Rénovation", href: "/travaux-renovation" },
-  { name: "Contact", href: "/contact" },
-];
-
-function Header() {
-  return (
-    <header className="sticky top-0 z-50 border-b border-gold/15" style={{ backgroundColor: '#020202' }}>
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-32">
-          {/* Logo */}
-          <Link href="/" className="flex items-center shrink-0 -ml-2">
-            <Image
-              src={`${BASE_PATH}/logo-tmt.png`}
-              alt="TMT Travaux — Terrassement Maçonnerie Travaux"
-              width={400}
-              height={133}
-              className="h-28 w-auto"
-              priority
-            />
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="link-underline px-4 py-2 text-sm font-medium tracking-wide text-white-warm/90 hover:text-gold transition-colors uppercase"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-
-          {/* CTA Desktop */}
-          <div className="hidden lg:block">
-            <AnimatedButton
-              href="/contact"
-              variant="gold"
-              label="Devis Gratuit"
-              className="px-6 py-3"
-            />
-          </div>
-
-          {/* Mobile Menu Button */}
-          <MobileMenuButton />
-        </div>
-      </nav>
-
-      {/* Mobile Menu */}
-      <MobileMenu />
-    </header>
-  );
-}
-
-function MobileMenuButton() {
-  return (
-    <label
-      htmlFor="mobile-menu-toggle"
-      className="lg:hidden flex flex-col gap-1.5 cursor-pointer p-2"
-      aria-label="Ouvrir le menu"
-    >
-      <input type="checkbox" id="mobile-menu-toggle" className="peer hidden" />
-      <span className="block w-6 h-0.5 bg-white-warm transition-transform peer-checked:rotate-45 peer-checked:translate-y-2" />
-      <span className="block w-6 h-0.5 bg-white-warm transition-opacity peer-checked:opacity-0" />
-      <span className="block w-6 h-0.5 bg-white-warm transition-transform peer-checked:-rotate-45 peer-checked:-translate-y-2" />
-    </label>
-  );
-}
-
-function MobileMenu() {
-  return (
-    <div className="lg:hidden max-h-0 overflow-hidden has-[#mobile-menu-toggle:checked]:max-h-96 transition-all duration-300 bg-black-deep border-t border-gold/10">
-      <div className="px-4 py-4 space-y-1">
-        {navigation.map((item) => (
-          <Link
-            key={item.name}
-            href={item.href}
-            className="block px-4 py-3 text-sm font-medium text-white-warm/90 hover:text-gold hover:bg-white/5 rounded transition-colors uppercase tracking-wide"
-          >
-            {item.name}
-          </Link>
-        ))}
-        <AnimatedButton
-          href="/contact"
-          variant="gold"
-          label="Devis Gratuit"
-          className="mt-3 w-full justify-center px-6 py-3"
-        />
-      </div>
-    </div>
-  );
-}
 
 function StickyMobileCTA() {
   return (
