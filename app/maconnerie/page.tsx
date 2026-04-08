@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import AnimatedButton from "@/components/ui/animated-button";
+import ShapeHeroTitle from "@/components/ui/shape-hero-title";
 
 export const metadata: Metadata = {
   title: "Maçonnerie Générale Hérault (34) | Gros Œuvre & Rénovation | TMT Travaux",
@@ -54,39 +55,18 @@ export default function MaconneriePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative py-24 bg-black-deep overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage:
-                "repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(139,139,139,0.08) 40px, rgba(139,139,139,0.08) 41px)",
-            }}
-          />
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold/30 bg-gold/5 mb-6">
-              <span className="text-xs font-medium text-gold uppercase tracking-widest">
-                Maçonnerie — Hérault (34)
-              </span>
-            </div>
-            <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
-              Entreprise de Maçonnerie Générale{" "}
-              <span className="text-gradient-gold">dans l&apos;Hérault (34)</span>
-            </h1>
-            <p className="mt-6 text-lg text-white-warm/70 leading-relaxed max-w-2xl">
-              Spécialiste de la maçonnerie générale dans l&apos;Hérault, TMT Travaux accompagne les
-              particuliers et les professionnels dans tous leurs projets de construction et de
-              rénovation. Extension de maison, réfection de façade en pierre, travaux de structure
-              lourde — nous intervenons de <strong>Montpellier à Béziers</strong> en passant par Sète.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <AnimatedButton href="/contact" variant="gold" label="Devis Maçonnerie Gratuit" />
-              <AnimatedButton href="/travaux-renovation" variant="dark" label="Voir Travaux & Rénovation" />
-            </div>
+      <section className="bg-black-deep">
+        <ShapeHeroTitle
+          badge="Maçonnerie — Hérault (34)"
+          line1="Entreprise de Maçonnerie Générale"
+          line2="dans l'Hérault (34)"
+          description="Spécialiste de la maçonnerie générale dans l'Hérault, TMT Travaux accompagne les particuliers et les professionnels dans tous leurs projets de construction et de rénovation. Extension de maison, réfection de façade en pierre, travaux de structure lourde — nous intervenons de Montpellier à Béziers en passant par Sète."
+        >
+          <div className="mt-8 flex flex-col sm:flex-row gap-4">
+            <AnimatedButton href="/contact" variant="gold" label="Devis Maçonnerie Gratuit" />
+            <AnimatedButton href="/travaux-renovation" variant="dark" label="Voir Travaux & Rénovation" />
           </div>
-        </div>
+        </ShapeHeroTitle>
       </section>
 
       {/* Prestations */}

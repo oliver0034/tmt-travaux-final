@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import AnimatedButton from "@/components/ui/animated-button";
+import ShapeHeroTitle from "@/components/ui/shape-hero-title";
 
 export const metadata: Metadata = {
   title: "Terrassement & VRD Hérault (34) | Viabilisation & Enrochement | TMT Travaux",
@@ -92,49 +93,27 @@ export default function TerrassementPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative py-24 bg-black-deep overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage:
-                "repeating-linear-gradient(135deg, transparent, transparent 50px, rgba(201,162,39,0.08) 50px, rgba(201,162,39,0.08) 51px)",
-            }}
-          />
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold/30 bg-gold/5 mb-6">
-              <span className="text-xs font-medium text-gold uppercase tracking-widest">
-                Terrassement & VRD — Hérault (34)
-              </span>
-            </div>
-            <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
-              Terrassement, VRD &amp; Aménagement de Terrain{" "}
-              <span className="text-gradient-gold">dans l&apos;Hérault (34)</span>
-            </h1>
-            <p className="mt-6 text-lg text-white-warm/70 leading-relaxed max-w-2xl">
-              Le terrassement est l&apos;étape cruciale qui garantit la stabilité et la pérennité de tout
-              ouvrage de bâtiment. Spécialiste du terrassement dans l&apos;Hérault, TMT Travaux accompagne
-              les projets de construction neuve, d&apos;extension et d&apos;aménagement. De Paulhan à Gignac,
-              nous maîtrisons les contraintes géologiques locales pour une préparation de sol irréprochable.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <AnimatedButton href="/contact" variant="gold" label="Devis Terrassement Gratuit" />
-              <AnimatedButton href="tel:+33748157160" variant="dark" label="07 48 15 71 60"
-                icon={<svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>}
-              />
-            </div>
-            {/* Badges normes */}
-            <div className="mt-8 flex flex-wrap gap-3">
-              {["DTU 11.1", "DTU 12", "DTU 13.11", "DTU 13.12", "Garantie Décennale"].map((n) => (
-                <span key={n} className="text-xs font-semibold text-gold/80 border border-gold/20 bg-gold/5 px-3 py-1 rounded-full">
-                  {n}
-                </span>
-              ))}
-            </div>
+      <section className="bg-black-deep">
+        <ShapeHeroTitle
+          badge="Terrassement & VRD — Hérault (34)"
+          line1="Terrassement, VRD & Aménagement de Terrain"
+          line2="dans l'Hérault (34)"
+          description="Le terrassement est l'étape cruciale qui garantit la stabilité et la pérennité de tout ouvrage de bâtiment. Spécialiste du terrassement dans l'Hérault, TMT Travaux accompagne les projets de construction neuve, d'extension et d'aménagement. De Paulhan à Gignac, nous maîtrisons les contraintes géologiques locales pour une préparation de sol irréprochable."
+        >
+          <div className="mt-8 flex flex-col sm:flex-row gap-4">
+            <AnimatedButton href="/contact" variant="gold" label="Devis Terrassement Gratuit" />
+            <AnimatedButton href="tel:+33748157160" variant="dark" label="07 48 15 71 60"
+              icon={<svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>}
+            />
           </div>
-        </div>
+          <div className="mt-6 flex flex-wrap gap-3">
+            {["DTU 11.1", "DTU 12", "DTU 13.11", "DTU 13.12", "Garantie Décennale"].map((n) => (
+              <span key={n} className="text-xs font-semibold text-gold/80 border border-gold/20 bg-gold/5 px-3 py-1 rounded-full">
+                {n}
+              </span>
+            ))}
+          </div>
+        </ShapeHeroTitle>
       </section>
 
       {/* Prestations */}

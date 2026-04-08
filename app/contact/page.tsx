@@ -401,7 +401,7 @@ export default function ContactPage() {
                     </svg>
                     <div>
                       <p className="font-semibold text-charcoal">Adresse</p>
-                      <p>Lafon de Lacan, 34230 Saint-Pargoire</p>
+                      <p>Lieu dit Lafon de Lacan, 34230 Saint-Pargoire</p>
                     </div>
                   </li>
                 </ul>
@@ -409,22 +409,62 @@ export default function ContactPage() {
 
               <div className="bg-bg-light rounded-2xl p-8">
                 <h3 className="text-lg font-bold text-charcoal mb-4">Zone d&apos;intervention</h3>
-                <ul className="space-y-2 text-sm text-[var(--text-secondary)]">
-                  {["Paulhan", "Clermont-l'Hérault", "Pézenas", "Lodève", "Gignac"].map(
-                    (city) => (
-                      <li key={city} className="flex items-center gap-2">
-                        <svg className="w-4 h-4 text-gold shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                        </svg>
-                        {city}
-                      </li>
-                    )
-                  )}
-                  <li className="text-[var(--text-muted)] text-xs mt-2">
-                    & tout le département de l&apos;Hérault (34)
-                  </li>
+                <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm text-[var(--text-secondary)]">
+                  {[
+                    "Saint-Pargoire",
+                    "Paulhan",
+                    "Clermont-l'Hérault",
+                    "Pézenas",
+                    "Lodève",
+                    "Gignac",
+                    "Montpellier",
+                    "Béziers",
+                    "Sète",
+                    "Mèze",
+                    "Agde",
+                  ].map((city) => (
+                    <li key={city} className="flex items-center gap-2">
+                      <svg className="w-3.5 h-3.5 text-gold shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                      </svg>
+                      {city}
+                    </li>
+                  ))}
                 </ul>
+                <p className="text-[var(--text-muted)] text-xs mt-3">
+                  & tout le département de l&apos;Hérault (34) — rayon 55 km
+                </p>
+              </div>
+
+              {/* Google Maps */}
+              <div className="bg-bg-light rounded-2xl overflow-hidden">
+                <iframe
+                  src="https://maps.google.com/maps?q=Lieu+dit+Lafon+de+Lacan,+34230+Saint-Pargoire,+France&output=embed&z=14"
+                  width="100%"
+                  height="220"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Localisation TMT Travaux — Saint-Pargoire"
+                />
+                <div className="px-5 py-4">
+                  <p className="text-sm font-semibold text-charcoal">TMT Travaux</p>
+                  <p className="text-xs text-[var(--text-muted)] mt-0.5">
+                    Lieu dit Lafon de Lacan, 34230 Saint-Pargoire
+                  </p>
+                  <a
+                    href="https://maps.google.com/?q=Lieu+dit+Lafon+de+Lacan,+34230+Saint-Pargoire"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-xs text-gold hover:underline mt-2"
+                  >
+                    Ouvrir dans Google Maps
+                    <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
               </div>
 
               <div className="bg-black-deep rounded-2xl p-8">
