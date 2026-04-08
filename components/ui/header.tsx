@@ -17,149 +17,168 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <>
-      <header style={{ position: 'sticky', top: 0, zIndex: 9000, backgroundColor: '#020202', borderBottom: '1px solid rgba(201,162,39,0.15)' }}>
-        <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '88px' }}>
-
-          {/* Logo */}
-          <Link href="/" onClick={() => setOpen(false)} style={{ display: 'flex', alignItems: 'center' }}>
-            <Image
-              src={`${BASE_PATH}/logo-tmt.png`}
-              alt="TMT Travaux"
-              width={260}
-              height={87}
-              style={{ height: '72px', width: 'auto' }}
-              priority
-            />
-          </Link>
-
-          {/* Desktop nav */}
-          <nav style={{ display: 'none' }} className="lg-nav">
-            {navigation.map((item) => (
-              <Link key={item.name} href={item.href} style={{ padding: '8px 16px', color: '#F5F0E8', textDecoration: 'none', fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                {item.name}
-              </Link>
-            ))}
-          </nav>
-
-          {/* Bouton hamburger */}
-          <button
-            onClick={() => setOpen(!open)}
-            aria-label="Menu"
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-              gap: '5px',
-              width: '44px',
-              height: '44px',
-              background: 'none',
-              border: 'none',
-              cursor: 'pointer',
-              padding: '4px',
-            }}
-          >
-            <span style={{
-              display: 'block', width: '24px', height: '2px', backgroundColor: '#F5F0E8',
-              transition: 'transform 0.2s',
-              transform: open ? 'rotate(45deg) translate(5px, 5px)' : 'none',
-            }} />
-            <span style={{
-              display: 'block', width: '24px', height: '2px', backgroundColor: '#F5F0E8',
-              transition: 'opacity 0.2s',
-              opacity: open ? 0 : 1,
-            }} />
-            <span style={{
-              display: 'block', width: '24px', height: '2px', backgroundColor: '#F5F0E8',
-              transition: 'transform 0.2s',
-              transform: open ? 'rotate(-45deg) translate(5px, -5px)' : 'none',
-            }} />
-          </button>
-        </div>
-      </header>
-
-      {/* Menu mobile — rendu conditionnel pur, affiché uniquement si open */}
-      {open && (
-        <>
-          {/* Overlay */}
-          <div
-            onClick={() => setOpen(false)}
-            style={{
-              position: 'fixed',
-              inset: 0,
-              zIndex: 9001,
-              backgroundColor: 'rgba(0,0,0,0.6)',
-            }}
+    <header
+      style={{
+        position: 'sticky',
+        top: 0,
+        zIndex: 1000,
+        backgroundColor: '#020202',
+        borderBottom: '1px solid rgba(201,162,39,0.15)',
+      }}
+    >
+      {/* Barre principale */}
+      <div
+        style={{
+          maxWidth: '1280px',
+          margin: '0 auto',
+          padding: '0 16px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          height: '80px',
+        }}
+      >
+        {/* Logo */}
+        <Link href="/" onClick={() => setOpen(false)} style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+          <Image
+            src={`${BASE_PATH}/logo-tmt.png`}
+            alt="TMT Travaux"
+            width={220}
+            height={73}
+            style={{ height: '64px', width: 'auto' }}
+            priority
           />
+        </Link>
 
-          {/* Panneau de navigation */}
-          <div style={{
-            position: 'fixed',
-            top: '88px',
-            left: 0,
-            right: 0,
-            zIndex: 9002,
-            backgroundColor: '#0A0A0A',
-            borderBottom: '1px solid rgba(201,162,39,0.25)',
-            boxShadow: '0 8px 40px rgba(0,0,0,0.7)',
-            padding: '12px 16px 20px',
-          }}>
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                onClick={() => setOpen(false)}
-                style={{
-                  display: 'block',
-                  padding: '14px 16px',
-                  color: '#F5F0E8',
-                  textDecoration: 'none',
-                  fontSize: '15px',
-                  fontWeight: 600,
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.06em',
-                  borderRadius: '8px',
-                  marginBottom: '4px',
-                }}
-              >
-                {item.name}
-              </Link>
-            ))}
-
-            {/* CTA devis */}
+        {/* Liens desktop */}
+        <nav style={{ display: 'flex', alignItems: 'center', gap: '4px' }} className="desktop-nav">
+          {navigation.map((item) => (
             <Link
-              href="/contact"
-              onClick={() => setOpen(false)}
+              key={item.name}
+              href={item.href}
               style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '8px',
-                marginTop: '12px',
-                padding: '14px',
-                background: 'linear-gradient(135deg, #C9A227, #D4B94E)',
-                color: '#020202',
-                fontWeight: 700,
-                fontSize: '14px',
-                textTransform: 'uppercase',
-                letterSpacing: '0.08em',
-                borderRadius: '10px',
+                padding: '8px 14px',
+                color: '#F5F0E8',
                 textDecoration: 'none',
+                fontSize: '13px',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
               }}
             >
-              Devis Gratuit
+              {item.name}
             </Link>
-          </div>
-        </>
+          ))}
+          <Link
+            href="/contact"
+            style={{
+              marginLeft: '8px',
+              padding: '10px 20px',
+              background: 'linear-gradient(135deg, #C9A227, #D4B94E)',
+              color: '#020202',
+              textDecoration: 'none',
+              fontWeight: 700,
+              fontSize: '13px',
+              textTransform: 'uppercase',
+              letterSpacing: '0.06em',
+              borderRadius: '8px',
+            }}
+          >
+            Devis Gratuit
+          </Link>
+        </nav>
+
+        {/* Bouton hamburger mobile */}
+        <button
+          onClick={() => setOpen(!open)}
+          aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'}
+          className="mobile-btn"
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            gap: '5px',
+            width: '48px',
+            height: '48px',
+            background: 'rgba(255,255,255,0.08)',
+            border: '1px solid rgba(201,162,39,0.3)',
+            borderRadius: '8px',
+            cursor: 'pointer',
+            padding: '6px',
+          }}
+        >
+          <span style={{ display: 'block', width: '22px', height: '2px', backgroundColor: '#F5F0E8', borderRadius: '2px', transition: 'transform 0.2s', transform: open ? 'rotate(45deg) translate(0px, 7px)' : 'none' }} />
+          <span style={{ display: 'block', width: '22px', height: '2px', backgroundColor: '#F5F0E8', borderRadius: '2px', transition: 'opacity 0.2s', opacity: open ? 0 : 1 }} />
+          <span style={{ display: 'block', width: '22px', height: '2px', backgroundColor: '#F5F0E8', borderRadius: '2px', transition: 'transform 0.2s', transform: open ? 'rotate(-45deg) translate(0px, -7px)' : 'none' }} />
+        </button>
+      </div>
+
+      {/* Menu déroulant — à l'intérieur du header sticky, pas de problème de positionnement */}
+      {open && (
+        <div
+          style={{
+            backgroundColor: '#0d0d0d',
+            borderTop: '1px solid rgba(201,162,39,0.2)',
+            padding: '8px 12px 16px',
+          }}
+          className="mobile-menu"
+        >
+          {navigation.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              onClick={() => setOpen(false)}
+              style={{
+                display: 'block',
+                padding: '13px 16px',
+                color: '#F5F0E8',
+                textDecoration: 'none',
+                fontSize: '15px',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                letterSpacing: '0.06em',
+                borderRadius: '8px',
+                marginBottom: '2px',
+                borderBottom: '1px solid rgba(255,255,255,0.05)',
+              }}
+            >
+              {item.name}
+            </Link>
+          ))}
+          <Link
+            href="/contact"
+            onClick={() => setOpen(false)}
+            style={{
+              display: 'block',
+              textAlign: 'center',
+              marginTop: '10px',
+              padding: '14px',
+              background: 'linear-gradient(135deg, #C9A227, #D4B94E)',
+              color: '#020202',
+              fontWeight: 700,
+              fontSize: '14px',
+              textTransform: 'uppercase',
+              letterSpacing: '0.08em',
+              borderRadius: '10px',
+              textDecoration: 'none',
+            }}
+          >
+            Devis Gratuit
+          </Link>
+        </div>
       )}
 
       <style>{`
+        .desktop-nav { display: none !important; }
+        .mobile-btn { display: flex !important; }
+        .mobile-menu { display: block; }
         @media (min-width: 1024px) {
-          .lg-nav { display: flex !important; align-items: center; gap: 4px; }
-          button[aria-label="Menu"] { display: none !important; }
+          .desktop-nav { display: flex !important; }
+          .mobile-btn { display: none !important; }
+          .mobile-menu { display: none !important; }
         }
       `}</style>
-    </>
+    </header>
   );
 }
