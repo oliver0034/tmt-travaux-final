@@ -52,6 +52,33 @@ const categories = [
   },
 ];
 
+const etapesMetallerie = [
+  {
+    step: "01",
+    titre: "Fabrication en Atelier",
+    description:
+      "Conception et fabrication sur mesure de la structure en acier robuste : plateforme, garde-corps à lisses horizontales et escalier droit. Travail de soudure de précision en atelier.",
+    image: "/images/realisations/fabrication-plateforme-metallique-sur-mesure.jpg",
+    alt: "Fabrication sur mesure d'une plateforme métallique et garde-corps en atelier par TMT Travaux Hérault.",
+  },
+  {
+    step: "02",
+    titre: "Structure & Pose",
+    description:
+      "Pose de la structure métallique autoportée sur la façade. Fixations lourdes en façade et poteaux de soutien pour une stabilité parfaite de la plateforme suspendue.",
+    image: "/images/realisations/pose-structure-metallique-facade-herault.jpg",
+    alt: "Pose d'une structure métallique autoportée sur façade de maison pour création de terrasse suspendue.",
+  },
+  {
+    step: "03",
+    titre: "Escalier & Finition",
+    description:
+      "Installation de l'escalier droit avec marches en caillebotis antidérapant pour une évacuation optimale des eaux de pluie. Garde-corps sécurisé conforme aux normes.",
+    image: "/images/realisations/escalier-metallique-exterieur-caillebotis-tmt.jpg",
+    alt: "Escalier métallique extérieur droit avec marches en caillebotis antidérapant et garde-corps sécurisé.",
+  },
+];
+
 const etapesPiscine = [
   {
     step: "01",
@@ -301,6 +328,116 @@ export default function RealisationsPage() {
         </div>
       </section>
 
+      {/* Étude de Cas : Plateforme Métallique Saint-Pargoire */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-3xl shadow-premium-lg overflow-hidden border border-gray-100">
+            {/* Header du projet */}
+            <div className="bg-black-deep px-6 sm:px-10 py-8">
+              <div className="flex flex-wrap items-center gap-3 mb-4">
+                <span className="text-xs font-semibold text-black-deep bg-gold/90 px-3 py-1 rounded-full uppercase tracking-wider">
+                  Métallerie & Serrurerie
+                </span>
+                <span className="text-xs font-medium text-white-warm/60 flex items-center gap-1">
+                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  Saint-Pargoire (34)
+                </span>
+              </div>
+              <h3 className="text-2xl sm:text-3xl font-bold text-white-warm">
+                Création d&apos;une Plateforme Métallique et Escalier Extérieur sur Mesure{" "}
+                <span className="text-gradient-gold">à Saint-Pargoire</span>
+              </h3>
+            </div>
+
+            {/* Contenu du projet */}
+            <div className="px-6 sm:px-10 py-10">
+              {/* Description technique */}
+              <div className="max-w-3xl mb-12">
+                <h4 className="text-lg font-bold text-charcoal mb-4">
+                  Optimisation d&apos;accès et aménagement métallique design
+                </h4>
+                <div className="space-y-4 text-[var(--text-secondary)] leading-relaxed">
+                  <p>
+                    <strong className="text-charcoal">Le projet —</strong> Nos clients souhaitaient
+                    créer un accès direct depuis l&apos;étage vers le jardin. Nous avons conçu, fabriqué
+                    et installé une <strong>plateforme métallique sur mesure</strong> avec un escalier
+                    droit sécurisé.
+                  </p>
+                  <p>
+                    <strong className="text-charcoal">Expertise TMT Travaux —</strong> Fabrication
+                    d&apos;une plateforme en acier sur mesure, pose d&apos;un escalier droit à marches
+                    caillebotis antidérapantes et garde-corps conformes aux normes de sécurité.
+                    Travail de soudure et d&apos;ancrage de précision pour garantir la pérennité
+                    de l&apos;ouvrage sous <strong>Garantie Décennale</strong>.
+                  </p>
+                  <p>
+                    <strong className="text-charcoal">Résultat —</strong> Un ouvrage moderne, durable
+                    et fonctionnel qui valorise l&apos;esthétique du bâtiment tout en offrant un nouvel
+                    accès fluide et sécurisé à l&apos;extérieur.
+                  </p>
+                </div>
+                {/* Points techniques */}
+                <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  {[
+                    { label: "Conception sur mesure", desc: "Structure en acier adaptée à la façade" },
+                    { label: "Sécurité & Normes", desc: "Garde-corps à lisses, caillebotis antidérapant" },
+                    { label: "Ancrage & Solidité", desc: "Fixations lourdes et poteaux de soutien" },
+                  ].map((point) => (
+                    <div key={point.label} className="bg-bg-light rounded-xl p-4">
+                      <p className="text-sm font-bold text-charcoal">{point.label}</p>
+                      <p className="text-xs text-[var(--text-muted)] mt-1">{point.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Photos du projet */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {etapesMetallerie.map((etape) => (
+                  <div key={etape.step} className="group">
+                    <div className="relative h-72 sm:h-80 rounded-2xl overflow-hidden shadow-premium cursor-pointer">
+                      <Image
+                        src={etape.image}
+                        alt={etape.alt}
+                        fill
+                        className="object-cover transition-all duration-700 ease-out group-hover:scale-110 group-hover:brightness-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition-opacity duration-500 group-hover:opacity-60" />
+                      <div className="absolute top-4 left-4 w-10 h-10 rounded-full gradient-gold flex items-center justify-center shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-12">
+                        <span className="text-sm font-extrabold text-black-deep">{etape.step}</span>
+                      </div>
+                      <div className="absolute bottom-0 left-0 right-0 p-5">
+                        <p className="text-white font-bold text-lg transition-transform duration-500 group-hover:translate-y-[-4px]">
+                          {etape.titre}
+                        </p>
+                      </div>
+                      <div className="absolute inset-0 rounded-2xl ring-0 ring-gold/0 transition-all duration-500 group-hover:ring-2 group-hover:ring-gold/50" />
+                    </div>
+                    <p className="mt-4 text-sm text-[var(--text-secondary)] leading-relaxed">
+                      {etape.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTA du projet */}
+              <div className="mt-12 pt-8 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div>
+                  <p className="text-charcoal font-bold">Un projet de métallerie ou de structure métallique ?</p>
+                  <p className="text-sm text-[var(--text-muted)]">
+                    Plateforme, escalier, garde-corps — nous étudions votre projet gratuitement.
+                  </p>
+                </div>
+                <AnimatedButton href="/contact" variant="gold" label="Demander mon étude personnalisée" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Pourquoi TMT */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -457,7 +594,7 @@ export default function RealisationsPage() {
             url: "https://tmt-travaux-herault.fr/realisations",
             mainEntity: {
               "@type": "ItemList",
-              numberOfItems: 1,
+              numberOfItems: 2,
               itemListElement: [
                 {
                   "@type": "ListItem",
@@ -467,6 +604,27 @@ export default function RealisationsPage() {
                     name: "Construction d'une Piscine en Béton 14x4m à Saint-Pargoire (34)",
                     description:
                       "Réalisation complète d'une piscine en béton de 14x4 mètres : coulage du radier en béton armé, élévation des murs en blocs béton, installation du système de filtration et finition grise moderne. Garantie Décennale.",
+                    locationCreated: {
+                      "@type": "Place",
+                      name: "Saint-Pargoire",
+                      address: {
+                        "@type": "PostalAddress",
+                        addressLocality: "Saint-Pargoire",
+                        postalCode: "34230",
+                        addressRegion: "Hérault",
+                        addressCountry: "FR",
+                      },
+                    },
+                  },
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  item: {
+                    "@type": "CreativeWork",
+                    name: "Création d'une Plateforme Métallique et Escalier Extérieur sur Mesure à Saint-Pargoire",
+                    description:
+                      "Conception, fabrication et pose d'une plateforme métallique sur mesure avec escalier droit à marches caillebotis antidérapantes et garde-corps sécurisé. Travail de soudure et d'ancrage de précision. Garantie Décennale.",
                     locationCreated: {
                       "@type": "Place",
                       name: "Saint-Pargoire",
