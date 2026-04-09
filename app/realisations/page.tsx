@@ -163,7 +163,7 @@ export default function RealisationsPage() {
       </section>
 
       {/* Chiffres Clés */}
-      <section className="py-16 bg-white border-b border-gray-100">
+      <section className="py-10 sm:py-14 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {chiffres.map((item) => (
@@ -179,9 +179,9 @@ export default function RealisationsPage() {
       </section>
 
       {/* Domaines d'intervention */}
-      <section className="py-24 bg-white">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <p className="text-sm font-semibold uppercase tracking-widest text-gold mb-3">Nos Domaines</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-charcoal">
               Des compétences complètes en travaux et BTP
@@ -220,7 +220,7 @@ export default function RealisationsPage() {
       </section>
 
       {/* Étude de Cas : Piscine Béton Saint-Pargoire */}
-      <section className="py-24 bg-bg-light">
+      <section className="py-12 sm:py-16 bg-bg-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* En-tête du projet */}
           <div className="text-center mb-6">
@@ -232,7 +232,7 @@ export default function RealisationsPage() {
           </div>
 
           {/* Carte projet principale */}
-          <div className="mt-16 bg-white rounded-3xl shadow-premium-lg overflow-hidden">
+          <div className="mt-10 bg-white rounded-3xl shadow-premium-lg overflow-hidden">
             {/* Header du projet */}
             <div className="bg-black-deep px-6 sm:px-10 py-8">
               <div className="flex flex-wrap items-center gap-3 mb-4">
@@ -256,7 +256,7 @@ export default function RealisationsPage() {
             {/* Contenu du projet */}
             <div className="px-6 sm:px-10 py-10">
               {/* Description technique */}
-              <div className="max-w-3xl mb-12">
+              <div className="max-w-3xl mb-8">
                 <h4 className="text-lg font-bold text-charcoal mb-4">
                   Du gros œuvre à la mise en eau : l&apos;expertise TMT Travaux
                 </h4>
@@ -329,7 +329,7 @@ export default function RealisationsPage() {
       </section>
 
       {/* Étude de Cas : Plateforme Métallique Saint-Pargoire */}
-      <section className="py-24 bg-white">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-3xl shadow-premium-lg overflow-hidden border border-gray-100">
             {/* Header du projet */}
@@ -355,7 +355,7 @@ export default function RealisationsPage() {
             {/* Contenu du projet */}
             <div className="px-6 sm:px-10 py-10">
               {/* Description technique */}
-              <div className="max-w-3xl mb-12">
+              <div className="max-w-3xl mb-8">
                 <h4 className="text-lg font-bold text-charcoal mb-4">
                   Optimisation d&apos;accès et aménagement métallique design
                 </h4>
@@ -439,9 +439,9 @@ export default function RealisationsPage() {
       </section>
 
       {/* Pourquoi TMT */}
-      <section className="py-24 bg-white">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <p className="text-sm font-semibold uppercase tracking-widest text-gold mb-3">Nos Engagements</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-charcoal">
               Pourquoi nos clients nous font confiance
@@ -487,7 +487,7 @@ export default function RealisationsPage() {
       </section>
 
       {/* SEO Local Content */}
-      <section className="py-24 bg-bg-light">
+      <section className="py-12 sm:py-16 bg-bg-light">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-charcoal mb-8">
             Nos réalisations dans l&apos;Hérault : un savoir-faire ancré dans le territoire
@@ -533,7 +533,7 @@ export default function RealisationsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-black-deep">
+      <section className="py-12 sm:py-16 bg-black-deep">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white">
             Votre projet mérite le <span className="text-gradient-gold">meilleur</span>
