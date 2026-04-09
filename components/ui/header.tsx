@@ -11,6 +11,7 @@ const navigation = [
   { name: 'Terrassement', href: '/terrassement' },
   { name: 'Maçonnerie', href: '/maconnerie' },
   { name: 'Travaux & Rénovation', href: '/travaux-renovation' },
+  { name: 'Réalisations', href: '/realisations' },
   { name: 'Contact', href: '/contact' },
 ];
 
