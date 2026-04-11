@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import HomeHero from "@/components/ui/home-hero";
 import AnimatedButton from "@/components/ui/animated-button";
 import ZoneMap from "@/components/ui/zone-map";
@@ -271,6 +272,70 @@ export default function HomePage() {
             }),
           }}
         />
+      </section>
+
+      {/* ==================== RÉALISATIONS (maillage interne) ==================== */}
+      <section className="py-16 bg-bg-light">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="text-sm font-semibold uppercase tracking-widest text-gold mb-3">
+              Nos Réalisations
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal">
+              Construction d&apos;une piscine béton 14x4m à Saint-Pargoire
+            </h2>
+            <div className="divider-gold mx-auto mt-6" />
+            <p className="mt-4 text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+              Du radier au remplissage — découvrez les étapes de réalisation d&apos;une piscine en béton
+              armé construite de A à Z par notre équipe dans l&apos;Hérault.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="relative h-72 rounded-2xl overflow-hidden shadow-premium group">
+              <Image
+                src="/images/realisations/construction-piscine-beton-st-pargoire-fondations.jpg"
+                alt="Coulage du radier en béton armé pour piscine 14x4m à Saint-Pargoire par TMT Travaux Hérault"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <p className="absolute bottom-4 left-4 text-white font-semibold text-sm">Fondations & Radier</p>
+            </div>
+            <div className="relative h-72 rounded-2xl overflow-hidden shadow-premium group">
+              <Image
+                src="/images/realisations/maconnerie-murs-piscine-blocs-beton.jpg"
+                alt="Élévation des murs de la piscine en blocs de béton 14x4 mètres — TMT Travaux Hérault"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <p className="absolute bottom-4 left-4 text-white font-semibold text-sm">Élévation des Murs</p>
+            </div>
+            <div className="relative h-72 rounded-2xl overflow-hidden shadow-premium group">
+              <Image
+                src="/images/realisations/piscine-beton-14x4m-finie-mise-en-eau.jpg"
+                alt="Piscine béton 14x4m finie et mise en eau à Saint-Pargoire — réalisation TMT Travaux"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <p className="absolute bottom-4 left-4 text-white font-semibold text-sm">Finition & Mise en Eau</p>
+            </div>
+          </div>
+
+          <div className="mt-10 text-center">
+            <a
+              href="/realisations"
+              className="inline-flex items-center gap-3 px-8 py-4 gradient-gold text-black-deep font-bold text-sm uppercase tracking-wider rounded-xl shadow-premium hover:shadow-premium-lg transition-all hover:scale-105"
+            >
+              Voir toutes nos réalisations
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
       </section>
 
       {/* ==================== ZONE D'INTERVENTION ==================== */}
