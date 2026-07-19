@@ -240,6 +240,17 @@ function Footer() {
         </div>
       </div>
 
+      {/* Crédit Fiducia IA */}
+      <div className="border-t border-white/10">
+        <p className="max-w-7xl mx-auto px-4 py-3 text-center text-[0.7rem] text-white-warm/40">
+          Site conçu et référencé par{" "}
+          <a href="https://fiducia-ia.com" rel="nofollow noopener" className="text-[#6ea8ff] underline">
+            Fiducia&nbsp;IA
+          </a>{" "}
+          &mdash; création de site &amp; référencement
+        </p>
+      </div>
+
       {/* Schema.org LocalBusiness */}
       <script
         type="application/ld+json"
